@@ -1,11 +1,15 @@
 import { NextResponse } from 'next/server';
 
 export async function middleware(request: Request) {
-  const userAgent = (await request.headers.get('user-agent')) || '';  // 비동기 요청에 대해 await 사용
-  const isMobile = /Mobi|Android/i.test(userAgent);
+  // 요청의 헤더에서 User-Agent를 가져옵니다.
+  const userAgent = request.headers.get('user-agent');
 
-  if (isMobile) {
-    // 모바일 기기에서 접근하면 /m 경로로 리디렉션
+  // 아이폰과 안드로이드 기기 확인
+  const isIphone = userAgent?.includes('iPhone');
+  const isAndroid = userAgent?.includes('Android');
+
+  // 모바일 기기일 경우 /m으로 리디렉션
+  if (isIphone || isAndroid) {
     return NextResponse.redirect(new URL('/m', request.url));
   }
 
