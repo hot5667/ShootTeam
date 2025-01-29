@@ -26,11 +26,11 @@ const Showcase = () => {
       <div
         className="flex flex-col items-center mb-8 lg:mb-0 bg-white p-6 rounded-3xl shadow-xl w-full lg:w-1/5"
       >
-        <img
+        {/* <img
           src="/images/nam-gi-hyun.jpg" // 이미지 경로를 실제 경로로 변경해야 합니다.
           alt="남기현 게임 기획자"
           className="w-40 h-40 rounded-full border-4 border-blue-500 mb-4 shadow-md"
-        />
+        /> */}
         <h1 className="text-3xl font-semibold text-blue-700">남기현</h1>
         <p className="mt-2 text-lg text-gray-600">게임 기획자</p>
 
@@ -75,7 +75,7 @@ const Showcase = () => {
       </div>
 
       {/* 오른쪽 - 직무 역량, 프로젝트, 교육 및 학력 */}
-      <div className="flex flex-col lg:w-4/5 text-center lg:text-left space-y-12 bg-white p-6 rounded-3xl shadow-xl w-full lg:w-4/5">
+      <div className="flex flex-col lg:w-4/5 text-center lg:text-left space-y-12 bg-white p-6 rounded-3xl shadow-xl w-full">
         {/* 직무 역량 */}
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-blue-600">직무 역량</h2>
