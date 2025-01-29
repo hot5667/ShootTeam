@@ -1,5 +1,16 @@
 import { Suspense } from "react";
-import ScrollText from "./ScrollText"; // 클라이언트 컴포넌트 (아래에서 분리)
+import ScrollText from "./ScrollText";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "새싹 게임즈 | 메인 페이지",
+  description: "새싹 게임즈의 공식 홈페이지입니다. 다양한 게임과 최신 정보를 확인하세요.",
+  keywords: "새싹 게임즈, 게임, 게임 개발, 인디 게임",
+  openGraph: {
+    title: "새싹 게임즈 | 메인 페이지",
+    description: "새싹 게임즈의 공식 홈페이지입니다. 다양한 게임과 최신 정보를 확인하세요.",
+  },
+};
 
 export default function Page() {
   return (
