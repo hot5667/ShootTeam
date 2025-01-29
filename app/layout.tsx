@@ -1,4 +1,6 @@
 import "./globals.css";
+import Link from "next/link";
+
 
 export default function RootLayout({
   children,
@@ -7,7 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className = "bg-gray-100">
+        <header className="bg-blue-600 text-white py-4">
+
+        </header>
         {children}
       </body>
     </html>
